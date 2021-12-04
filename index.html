@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>music noor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="navbar">
+      <img src="logo.png" class="logo">
+        <b>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">PRODUCTS</a></li>
+            <li><a href="#">ARTISTS</a></li>
+            <li><a href="#">CONTACTS</a></li>
+        </ul>
+            </b>
+    </div>
+    <div class="content">
+        <div class="left-col">
+            <h1>THE<br>NOOR <br> MUSIC</h1>
+        </div>
+        <div class="right-col">
+            
+        <p>
+            Click here to listen
+        </p>
+            <img src="puse.png" id="icon">
+        </div>
+    </div>
+</div>
+    <audio id="myMusic">
+    <source src= "%20song.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+        var myMusic=document.getElementById("myMusic");
+        var icon=document.getElementById("icon");
+        
+        icon.onclick=function(){
+            if(myMusic.paused){
+                myMusic.play();
+                icon.src="play.png";
+            }
+            else{
+                myMusic.pause();
+                icon.src="puse.png";
+            }
+        }
+    </script>
+</body>
+</html>
